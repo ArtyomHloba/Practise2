@@ -1,3 +1,135 @@
 * {
     box-sizing: border-box;
   }
+
+  body{
+    background-color: #ccd7f2;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Header section========================================================*/
+  .header-page{
+    max-width: 700px;
+    min-width: 600px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #ffff;
+  }
+
+  .header-page-container{
+    padding: 40px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .head-line{
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .pic-cloud,
+  .pic-sun{
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .pic-cloud{
+    color: #dddfde;
+  }
+
+  .pic-sun{
+    color: #e5bf2f;
+  }
+
+  .speedBtn,
+  .tempunitBtn{
+    font-size: 20px;
+    color: black;
+    background-color: #ffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: 0.5s;
+  }
+
+  .tempunitBtn:hover{
+    font-size: 20px;
+    color: black;
+    background-color: #94b8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+  }
+
+  .speedBtn:hover{
+    font-size: 20px;
+    color: black;
+    background-color: #94b8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+  }
+
+
+  /* Main section========================================================*/
+
+  .main-page{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 55px;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #ffff;
+  }
+
+  .main-page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .weather-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pic-about-weather{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .temperatura{
+    font-size: 20px;
+  }
+
+  .speed{
+    font-size: 15px;
+    color: gray;
+  }
+  .location{
+    font-size: 15px;
+  }
+
+  /* Footer ============================================================================*/
+
+  .footer-page{
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #ffff;
+    
+  }
+
+  .footer-page-container{
+    margin-top: 50px;
+  }
