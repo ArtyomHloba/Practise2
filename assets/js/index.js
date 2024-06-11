@@ -55,6 +55,7 @@ function generateWeather({
 
     currentTemperatureEl.textContent = `Температура: ${temperature} ${tempUnit}`;
     currentTemperatureEl.style.color = calcTemperatureColor(temperature);
+    currentTemperatureEl.src = selectPic(temperature);
 
     currentWindspeedEl.textContent = `Швидкість вітру: ${windspeed} ${windUnit}`;
     
@@ -75,4 +76,26 @@ function calcTemperatureColor(temperature) {
     }
 }
 
+function selectPic(temperature){
+    const picture = document.querySelector('.pic-about-weather');
 
+    if(temperature < 0){
+        picture.src = "./assets/img/unnamed.png"
+    }
+}
+
+
+function updateRealTime() {
+    const realTime = document.querySelector('.real-time');
+    const now = new Date();
+    const dateOptions = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+    const dateStr = now.toLocaleDateString('uk-UA', dateOptions);
+    realTime.textContent = `${dateStr}`;
+  }
+
+  updateRealTime();

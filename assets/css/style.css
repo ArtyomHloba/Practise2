@@ -41,10 +41,26 @@
 
   .pic-cloud{
     color: #dddfde;
+    transition: 0.2s;
+  }
+  
+  .pic-cloud:hover{
+    color: #94b8ff;
   }
 
   .pic-sun{
     color: #e5bf2f;
+    transition: 0.2s;
+  }
+
+  .pic-sun:hover{
+    color: gold;
+  }
+
+  .after-head-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
   }
 
   .speedBtn,
@@ -76,6 +92,14 @@
     padding: 5px 5px;
   }
 
+  .real-time{
+    background-color: #ffff;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
 
   /* Main section========================================================*/
 
@@ -105,6 +129,7 @@
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
+    padding: 5px 10px;
   }
 
   .temperatura{
