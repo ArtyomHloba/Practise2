@@ -5,16 +5,23 @@
   body{
     background-color: #ccd7f2;
     font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   /* Header section========================================================*/
   .header-page{
     max-width: 700px;
     min-width: 600px;
-    height: 100px;
+    width: 100%;
+
+    min-height: 100px;
     margin: 0 auto;
     background-color: #ffff;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px ;
     box-shadow: 0 0 5px #ffff;
   }
 
@@ -55,12 +62,6 @@
 
   .pic-sun:hover{
     color: gold;
-  }
-
-  .after-head-container{
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
   }
 
   .speedBtn,
@@ -105,14 +106,19 @@
 
   .main-page{
     max-width: 700px;
+    min-width: 600px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 55px;
-    background-color: #ffff;
-    border-radius: 20px;
-    box-shadow: 0 0 5px #ffff;
+    margin-top: 20px;
   }
 
-  .main-page-container{
+  .after-head-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .temperatura-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -122,8 +128,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
   }
 
+  .temperatura-container,
+  .weather-card{
+    background-color: #ffff;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 20px;
+
+  }
   .pic-about-weather{
     height: 150px;
     width: 150px;
@@ -148,13 +162,36 @@
 
   .footer-page{
     max-width: 700px;
+    min-width: 600px;
+    width: 100%;
+
     margin: 0 auto;
+    margin-top: auto;
+
     background-color: #ffff;
-    border-radius: 20px;
-    box-shadow: 0 0 5px #ffff;
-    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px ;
+    box-shadow: 0 0 10px #ffff;
   }
 
   .footer-page-container{
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .link-git-hub,
+  .response-message{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .link-git-hub:hover,
+  .response-message:hover{
+    color: #94b8ff;
   }

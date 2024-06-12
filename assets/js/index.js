@@ -34,7 +34,6 @@ function switchTemperatureUnit(){
     .then(response => response.json())
     .then(data => generateWeather(data))
     .catch(err => console.log(err));
-
 }
 
 
@@ -59,7 +58,7 @@ function generateWeather({
 
     currentWindspeedEl.textContent = `Швидкість вітру: ${windspeed} ${windUnit}`;
     
-    currentTimeZoneEl.textContent = `Місто: ${timezone}`;
+    currentTimeZoneEl.textContent = `Місце розташування: ${timezone}`;
 
 }
 
