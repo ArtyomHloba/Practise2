@@ -65,7 +65,7 @@
 
   .speedBtn,
   .tempunitBtn{
-    font-size: 20px;
+    font-size: 19px;
     color: black;
     background-color: #ffff;
     border: none;
@@ -75,7 +75,7 @@
   }
 
   .tempunitBtn:hover{
-    font-size: 20px;
+    font-size: 19px;
     color: black;
     background-color: #94b8ff;
     border: none;
@@ -84,7 +84,7 @@
   }
 
   .speedBtn:hover{
-    font-size: 20px;
+    font-size: 19px;
     color: black;
     background-color: #94b8ff;
     border: none;
@@ -96,7 +96,7 @@
     background-color: #ffff;
     padding: 5px 5px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 400;
   }
 

@@ -51,14 +51,14 @@ function generateWeather({
     current_weather_units: { temperature: tempUnit, windspeed: windUnit },
     timezone 
 }) {
-
     const currentTemperatureEl = document.querySelector('.temperatura');
     const currentTimeZoneEl = document.querySelector('.location');
     const currentWindspeedEl = document.querySelector('.speed');
+    const weatherImage = document.querySelector('.pic-about-weather');
 
     currentTemperatureEl.textContent = `Поточна температура: ${temperature} ${tempUnit}`;
     currentTemperatureEl.style.color = calcTemperatureColor(temperature);
-    currentTemperatureEl.src = selectPic(temperature);
+    weatherImage.src = selectPic(temperature);
 
     currentWindspeedEl.textContent = `Поточна швидкість вітру: ${windspeed} ${windUnit}`;
     
@@ -78,10 +78,13 @@ function calcTemperatureColor(temperature) {
     }
 }
 
-function selectPic(temperature){
-    const picture = document.querySelector('.pic-about-weather');
+function selectPic(temperature) {
     if (temperature < 0) {
-        picture.src = "./assets/img/unnamed.png";
+        return "./assets/img/cold.png";
+    } else if (temperature <= 20) {
+        return "./assets/img/sun.jpg";
+    } else {
+        return "./assets/img/sun.jpg";
     }
 }
 
@@ -94,17 +97,18 @@ function generateThreeDaysWeather(daily) {
     
     threeDaysWeatherCards.forEach((card, index) => {
         if (days[index]) {
+
             const dayEl = card.querySelector('.day');
             const maxTempEl = card.querySelector('.threedays-temperatura');
             const windSpeedEl = card.querySelector('.threedays-speed');
+            const weatherImage = card.querySelector('.threedays-pic-about-weather');
 
             dayEl.textContent = `Дата: ${days[index]}`;
             maxTempEl.textContent = `Температура: ${maxTemps[index]}°C`;
             windSpeedEl.textContent = `Швидкість вітру: ${windSpeeds[index]} m/s`;
 
-
             maxTempEl.style.color = calcTemperatureColor(maxTemps[index]);
-            maxTempEl.src = selectPic(maxTemps[index]);
+            weatherImage.src = selectPic(maxTemps[index]);
         }
     });
 }
