@@ -51,6 +51,7 @@ function generateWeather({
     current_weather_units: { temperature: tempUnit, windspeed: windUnit },
     timezone 
 }) {
+    // temperature = -3;
     const currentTemperatureEl = document.querySelector('.temperatura');
     const currentTimeZoneEl = document.querySelector('.location');
     const currentWindspeedEl = document.querySelector('.speed');
@@ -80,11 +81,11 @@ function calcTemperatureColor(temperature) {
 
 function selectPic(temperature) {
     if (temperature < 0) {
-        return "./assets/img/cold.png";
+        return "./assets/img/icon-snowy.png";
     } else if (temperature <= 20) {
-        return "./assets/img/sun.jpg";
+        return "./assets/img/icon-sun.png";
     } else {
-        return "./assets/img/sun.jpg";
+        return "./assets/img/icon-sun.png";
     }
 }
 
@@ -97,6 +98,7 @@ function generateThreeDaysWeather(daily) {
     
     threeDaysWeatherCards.forEach((card, index) => {
         if (days[index]) {
+            // maxTemps[index] = -3;
 
             const dayEl = card.querySelector('.day');
             const maxTempEl = card.querySelector('.threedays-temperatura');
