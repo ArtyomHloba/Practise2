@@ -1,6 +1,6 @@
 const slides = [
     {
-        src: './assets/img/zp-img-1.jpg',
+        src: './assets/img/zp-img-3.jpg',
         alt: 'landscape1',
     },
     {
@@ -8,7 +8,7 @@ const slides = [
         alt: 'landscape2',
     },
     {
-        src: './assets/img/zp-img-3.jpg',
+        src: './assets/img/zp-img-1.jpg',
         alt: 'landscape3',
     },
     {

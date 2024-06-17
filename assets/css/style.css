@@ -3,7 +3,8 @@
   }
 
   body{
-    background-color: #ccd7f2;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(26,26,205,1) 10%, rgba(0,212,255,1) 95%);
     font-family: 'Inter', sans-serif;
 
     display: flex;
@@ -22,7 +23,7 @@
     background-color: #ffff;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px ;
-    box-shadow: 0 0 10px #94b8ff;
+    box-shadow: 0 0 5px gray;
   }
 
   .header-page-container{
@@ -71,9 +72,10 @@
     border: none;
     border-radius: 5px;
     padding: 5px 5px;
-    transition: 0.5s;
+    transition: 0.2s linear background-color;
   }
 
+  .speedBtn:hover,
   .tempunitBtn:hover{
     font-size: 19px;
     color: black;
@@ -81,15 +83,7 @@
     border: none;
     border-radius: 5px;
     padding: 5px 5px;
-  }
-
-  .speedBtn:hover{
-    font-size: 19px;
-    color: black;
-    background-color: #94b8ff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
+    box-shadow: 0 0 5px #94b8ff;
   }
 
   .real-time{
@@ -98,6 +92,7 @@
     border-radius: 5px;
     font-size: 19px;
     font-weight: 400;
+    box-shadow: 0 0 15px #94b8ff;
   }
 
 
@@ -137,6 +132,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  box-shadow: 0 0 5px black;
 }
 
 .prevBnt, .nextbtn{
@@ -238,14 +234,82 @@
     object-fit: cover;
   }
 
+  .seven-days-date,
   .day{
     font-size: 15px;
     font-weight: 600;
   }
 
+  .seven-days-speed,
   .threedays-speed{
     color: gray;
   }
+
+  .seven-days-main-container{
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .seven-days-main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+
+  .seven-days-weather-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    gap: 5px;
+
+    max-width: 250px;
+    min-width: 150px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #94b8ff;
+  }
+
+  .seven-days-pic-about-weather{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .show-seven-days-weather-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 15px 0;
+  }
+
+  .show-seven-days-weather-btn{
+    font-size: 19px;
+    color: black;
+    background-color: #ffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: 0.2s linear background-color;
+    box-shadow: 0 0 15px #94b8ff;
+  }
+
+  .show-seven-days-weather-btn:hover{
+    font-size: 19px;
+    color: black;
+    background-color: #94b8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    box-shadow: 0 0 15px #94b8ff;
+  }
+
+
+
+  
 
   /* Footer ============================================================================*/
 
