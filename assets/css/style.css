@@ -3,8 +3,7 @@
   }
 
   body{
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(26,26,205,1) 10%, rgba(0,212,255,1) 95%);
+    background-color: #F5F5F5;
     font-family: 'Inter', sans-serif;
 
     display: flex;
@@ -14,16 +13,14 @@
   
   /* Header section========================================================*/
   .header-page{
-    max-width: 700px;
+    max-width: 1000px;
     min-width: 600px;
     width: 100%;
-
     min-height: 50px;
     margin: 0 auto;
+
     background-color: #ffff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px ;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 10px gray;
   }
 
   .header-page-container{
@@ -66,41 +63,40 @@
 
   .speedBtn,
   .tempunitBtn{
-    font-size: 19px;
+    font-size: 20px;
     color: black;
     background-color: #ffff;
     border: none;
-    border-radius: 5px;
     padding: 5px 5px;
     transition: 0.2s linear background-color;
+    box-shadow: 0 0 10px gray;
   }
 
   .speedBtn:hover,
   .tempunitBtn:hover{
-    font-size: 19px;
+    font-size: 20px;
     color: black;
-    background-color: #94b8ff;
+    background-color: #C0C0C0;
     border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
-    box-shadow: 0 0 5px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .real-time{
     background-color: #ffff;
     padding: 5px 5px;
-    border-radius: 5px;
     font-size: 19px;
-    font-weight: 400;
-    box-shadow: 0 0 15px #94b8ff;
+    font-weight: 500;
+    box-shadow: 0 0 10px gray;
+    margin-right: 300px;
   }
 
 
   /* Main section========================================================*/
 
   .main-page{
-    max-width: 700px;
+    max-width: 1000px;
     min-width: 600px;
+    
     width: 100%;
     margin: 0 auto;
     margin-top: 20px;
@@ -131,8 +127,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px gray;
 }
 
 .prevBnt, .nextbtn{
@@ -168,14 +163,12 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    box-shadow: 0 0 10px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .temperatura-container,
   .weather-card{
     background-color: #ffff;
-    border-radius: 20px;
-
   }
   .pic-about-weather{
     height: 150px;
@@ -211,21 +204,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px 20px 10px;
-    gap: 5px;
+    padding: 20px 10px 20px 20px;
+    gap: 7px;
 
-    max-width: 250px;
+    max-width: 320px;
     min-width: 150px;
     width: 100%;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .contant-container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     width: 100%;
   }
 
@@ -248,12 +240,16 @@
 
   .seven-days-main-container{
     display: none;
+
+    max-width: 1000px;
+    min-width: 600px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 
   .seven-days-main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     width: 100%;
   }
@@ -270,8 +266,7 @@
     min-width: 150px;
     width: 100%;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .seven-days-pic-about-weather{
@@ -288,30 +283,27 @@
   }
 
   .show-seven-days-weather-btn{
-    font-size: 19px;
+    font-size: 18.5px;
     color: black;
     background-color: #ffff;
     border: none;
-    border-radius: 5px;
     padding: 5px 5px;
     transition: 0.2s linear background-color;
-    box-shadow: 0 0 15px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .show-seven-days-weather-btn:hover{
-    font-size: 19px;
+    font-size: 18.5px;
     color: black;
-    background-color: #94b8ff;
+    background-color: #C0C0C0;
     border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
-    box-shadow: 0 0 15px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
   
   /* Footer ============================================================================*/
 
   .footer-page{
-    max-width: 700px;
+    max-width: 1000px;
     min-width: 600px;
     width: 100%;
 
@@ -319,14 +311,12 @@
     margin-top: auto;
 
     background-color: #ffff;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px ;
-    box-shadow: 0 0 10px #94b8ff;
+    box-shadow: 0 0 10px gray;
   }
 
   .footer-page-container{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     gap: 10px;
@@ -338,10 +328,10 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .link-git-hub:hover,
   .response-message:hover{
-    color: #94b8ff;
+    color: #C0C0C0;
   }
