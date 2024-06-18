@@ -190,11 +190,12 @@
   }
 
   .speed{
-    font-size: 15px;
+    font-size: 17px;
     color: gray;
   }
+
   .location{
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .threedays-main-container{
@@ -306,11 +307,7 @@
     padding: 5px 5px;
     box-shadow: 0 0 15px #94b8ff;
   }
-
-
-
   
-
   /* Footer ============================================================================*/
 
   .footer-page{

@@ -6,6 +6,7 @@ const sevenDaysWeatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=47.
 
 let isCelsiDegree = true;
 let isKMToH = true;
+let threeDaysForecastData = null;
 
 const tempUnitBtn = document.querySelector('.tempunitBtn');
 tempUnitBtn.textContent = `Переключитися на ${isCelsiDegree ? 'F' : 'C'}`;
@@ -43,7 +44,10 @@ fetch(weatherUrl)
 
 fetch(threeDaysWeatherUrl)
     .then(response => response.json())
-    .then(data => generateThreeDaysWeather(data.daily))
+    .then(data => {
+        threeDaysForecastData = data.daily;
+        generateThreeDaysWeather(data.daily);
+    })
     .catch(err => console.log(err));
 
 const showSevenDaysWeatherBtn = document.querySelector('.show-seven-days-weather-btn');
@@ -67,9 +71,11 @@ function generateWeather({
     current_weather_units: { temperature: tempUnit, windspeed: windUnit },
     timezone 
 }) {
+    
     const currentTemperatureEl = document.querySelector('.temperatura');
     const currentTimeZoneEl = document.querySelector('.location');
     const currentWindspeedEl = document.querySelector('.speed');
+    const currentPrecipitationEl = document.querySelector('.precipitation-now');
     const weatherImage = document.querySelector('.pic-about-weather');
 
     let colorFunc = isCelsiDegree ? calcTemperatureColor : calcTemperatureColorFahrenheit;
@@ -79,41 +85,11 @@ function generateWeather({
 
     currentWindspeedEl.textContent = `Поточна швидкість вітру: ${windspeed} ${windUnit}`;
     currentTimeZoneEl.textContent = `Місце розташування: ${timezone}`;
-}
-
-function calcTemperatureColor(temperature) {
-    switch (true) {
-        case (temperature <= 0):
-            return 'blue';
-        case (temperature <= 20):
-            return 'green';
-        case (temperature <= 30):
-            return 'orange';
-        default:
-            return 'red';
-    }
-}
-
-function calcTemperatureColorFahrenheit(temperature) {
-    switch (true) {
-        case (temperature <= 32):
-            return 'blue';
-        case (temperature <= 68):
-            return 'green';
-        case (temperature <= 86):
-            return 'orange';
-        default:
-            return 'red';
-    }
-}
-
-function selectPic(temperature) {
-    if (temperature < 0) {
-        return "./assets/img/icon-snowy.png";
-    } else if (temperature <= 20) {
-        return "./assets/img/icon-sun.png";
+    
+    if (threeDaysForecastData) {
+        currentPrecipitationEl.textContent = `Поточні опади: ${threeDaysForecastData.precipitation_sum[0]} мм`;
     } else {
-        return "./assets/img/icon-sun.png";
+        currentPrecipitationEl.textContent = `Поточні опади: дані недоступні`;
     }
 }
 
@@ -182,6 +158,42 @@ function updateRealTime() {
     };
     const dateStr = now.toLocaleDateString('uk-UA', dateOptions);
     realTime.textContent = `${dateStr}`;
+}
+
+function calcTemperatureColor(temperature) {
+    switch (true) {
+        case (temperature <= 0):
+            return 'blue';
+        case (temperature <= 20):
+            return 'green';
+        case (temperature <= 30):
+            return 'orange';
+        default:
+            return 'red';
+    }
+}
+
+function calcTemperatureColorFahrenheit(temperature) {
+    switch (true) {
+        case (temperature <= 32):
+            return 'blue';
+        case (temperature <= 68):
+            return 'green';
+        case (temperature <= 86):
+            return 'orange';
+        default:
+            return 'red';
+    }
+}
+
+function selectPic(temperature) {
+    if (temperature < 0) {
+        return "./assets/img/icon-snowy.png";
+    } else if (temperature <= 20) {
+        return "./assets/img/icon-sun.png";
+    } else {
+        return "./assets/img/icon-sun.png";
+    }
 }
 
 updateRealTime();
