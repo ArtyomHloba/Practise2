@@ -12,14 +12,14 @@ const tempUnitBtn = document.querySelector('.tempunitBtn');
 tempUnitBtn.textContent = `Переключитися на ${isCelsiDegree ? 'F' : 'C'}`;
 
 const speedUnitBtn = document.querySelector('.speedBtn');
-speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/s'}`;
+speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/h'}`;
 
 speedUnitBtn.onclick = switchSpeedUnit;
 tempUnitBtn.onclick = switchTemperatureUnit;
 
 function switchSpeedUnit(){
     isKMToH = !isKMToH;
-    speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/s'}`;
+    speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/h'}`;
 
     fetch(`${weatherUrl}${isKMToH ? '' : '&wind_speed_unit=ms'}`)
     .then(response => response.json())
