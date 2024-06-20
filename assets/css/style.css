@@ -259,6 +259,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     width: 100%;
+    justify-items: center;
   }
 
 
@@ -367,41 +368,27 @@
     color: #C0C0C0;
   }
 
-  @media screen and (min-width: 600px) and (max-width: 1000px) {
-    .header-page{
-      max-width: 600px;
-      min-width: 400px;
-      width: 100%;
-      min-height: 50px;
-      margin: 0 auto;
-  
-      background-color: #ffff;
-      box-shadow: 0 0 10px gray;
+  @media screen and (min-width: 320px) and (max-width: 1000px) {
+
+    body{
+      padding: 0 2vw 0 2vw;
     }
 
-    .main-page{
-      max-width: 600px;
-      min-width: 400px;
-      
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 20px;
-    }
-
-    .seven-days-main-container{
-      max-width: 600px;
-      min-width: 400px;
-    }
-
-    .seven-days-weather-card{
+    .threedays-main-container{
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 10px 20px 10px;
-      gap: 5px;
-  
-      max-width: 290px;
-      min-width: 150px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .threedays-weather-card{
+
+    }
+    
+    .seven-days-main{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      justify-items: center;
+      gap: 10px;
       width: 100%;
     }
 
@@ -418,13 +405,7 @@
     .real-time{
       font-size: 15px;
     }
-
-    .footer-page{
-      max-width: 600px;
-      min-width: 400px;
-      width: 100%;
-    }
-
+    
     .link-git-hub,
     .response-message{
       font-size: 17px;
