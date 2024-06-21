@@ -5,16 +5,18 @@
   body{
     background-color: #F5F5F5;
     font-family: 'Inter', sans-serif;
-
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 0 2vw 0 2vw;
+
   }
   
   /* Header section========================================================*/
   .header-page{
     max-width: 1000px;
-    min-width: 600px;
+
     width: 100%;
     min-height: 50px;
     margin: 0 auto;
@@ -102,7 +104,6 @@
 
   .main-page{
     max-width: 1000px;
-    min-width: 600px;
     
     width: 100%;
     margin: 0 auto;
@@ -225,7 +226,6 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
-    width: 100%;
   }
 
   .threedays-pic-about-weather{
@@ -247,9 +247,7 @@
 
   .seven-days-main-container{
     display: none;
-
     max-width: 1000px;
-    min-width: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
   }
@@ -319,7 +317,7 @@
 
   .card-info{
     max-width: 490px;
-    min-width: 450px;
+    line-height: 1.5;
     background-color: #ffff;
     width: 100%;
     padding: 10px;
@@ -336,7 +334,7 @@
 
   .footer-page{
     max-width: 1000px;
-    min-width: 600px;
+
     width: 100%;
 
     margin: 0 auto;
@@ -368,19 +366,17 @@
     color: #C0C0C0;
   }
 
-  @media screen and (min-width: 320px) and (max-width: 1000px) {
-
-    body{
-      padding: 0 2vw 0 2vw;
-    }
-
+  @media screen and (max-width: 800px) {
     .threedays-main-container{
-      display: flex;
       flex-direction: column;
     }
 
     .threedays-weather-card{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       max-width: 100%;
+      gap: 10px;
     }
 
     .seven-days-main{

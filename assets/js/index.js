@@ -1,6 +1,6 @@
 'use strict';
 
-const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=47.8517&longitude=35.1171&hourly=temperature_2m&daily=temperature_2m_max&current_weather=true&timezone=Europe/Kiev";
+const WEATHER_URL = "https://api.open-meteo.com/v1/forecast?latitude=47.8517&longitude=35.1171&hourly=temperature_2m&daily=temperature_2m_max&current_weather=true&timezone=Europe/Kiev";
 const threeDaysWeatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=47.8517&longitude=35.1171&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max&wind_speed_unit=ms&timezone=GMT&forecast_days=3";
 const sevenDaysWeatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=47.875&longitude=35.125&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max&wind_speed_unit=ms&timezone=GMT&forecast_days=7";
 
@@ -14,33 +14,30 @@ tempUnitBtn.textContent = `Переключитися на ${isCelsiDegree ? 'F'
 const speedUnitBtn = document.querySelector('.speedBtn');
 speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/h'}`;
 
+loadWeather(isKMToH, isCelsiDegree);
+
 speedUnitBtn.onclick = switchSpeedUnit;
 tempUnitBtn.onclick = switchTemperatureUnit;
+
 
 function switchSpeedUnit(){
     isKMToH = !isKMToH;
     speedUnitBtn.textContent = `Переключитися ${isKMToH ? 'ms' : 'km/h'}`;
-
-    fetch(`${weatherUrl}${isKMToH ? '' : '&wind_speed_unit=ms'}`)
-    .then(response => response.json())
-    .then(data => generateWeather(data))
-    .catch(err => console.log(err));
+    loadWeather(isKMToH, isCelsiDegree);
 }
 
 function switchTemperatureUnit(){
     isCelsiDegree = !isCelsiDegree;
     tempUnitBtn.textContent = `Переключитися на ${isCelsiDegree ? 'F' : 'C'}`;
+    loadWeather(isKMToH, isCelsiDegree);
+}
 
-    fetch(`${weatherUrl}${isCelsiDegree ? '' : '&temperature_unit=fahrenheit'}`)
+function loadWeather(isKMToH, isCelsiDegree){
+    fetch(`${WEATHER_URL}${isCelsiDegree ? '' : '&temperature_unit=fahrenheit'}${isKMToH ? '' : '&wind_speed_unit=ms'}`)
     .then(response => response.json())
     .then(data => generateWeather(data))
     .catch(err => console.log(err));
 }
-
-fetch(weatherUrl)
-    .then(response => response.json())
-    .then(data => generateWeather(data))
-    .catch(err => console.log(err));
 
 fetch(threeDaysWeatherUrl)
     .then(response => response.json())
