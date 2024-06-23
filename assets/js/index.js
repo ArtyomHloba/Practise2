@@ -127,6 +127,7 @@ function generateSevenDaysWeather(daily) {
     
     sevenDaysWeatherCards.forEach((card, index) => {
         if (days[index]) {
+
             const dayEl = card.querySelector('.seven-days-date');
             const maxTempEl = card.querySelector('.seven-days-temperatura');
             const precipitationEl = card.querySelector('.seven-days-precipitation');
@@ -157,6 +158,20 @@ function updateRealTime() {
     realTime.textContent = `${dateStr}`;
 }
 
+function calcTemperatureColorFahrenheit(temperature) {
+    switch (true) {
+        case (temperature <= 32):
+            return 'blue';
+        case (temperature <= 68):
+            return 'green';
+        case (temperature <= 86):
+            return 'orange';
+        default:
+            return 'red';
+    }
+}
+
+
 function calcTemperatureColor(temperature) {
     switch (true) {
         case (temperature <= 0):
@@ -170,18 +185,6 @@ function calcTemperatureColor(temperature) {
     }
 }
 
-function calcTemperatureColorFahrenheit(temperature) {
-    switch (true) {
-        case (temperature <= 32):
-            return 'blue';
-        case (temperature <= 68):
-            return 'green';
-        case (temperature <= 86):
-            return 'orange';
-        default:
-            return 'red';
-    }
-}
 
 function selectPic(temperature) {
     if (temperature < 0) {
