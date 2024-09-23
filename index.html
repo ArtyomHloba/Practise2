@@ -1,206 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/img/iconweather.png" type="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./assets/img/iconweather.png" type="" />
     <script defer src="./assets/js/index.js"></script>
     <script defer src="./assets/js/slider.js"></script>
     <title>ЗМИ - Запоріжжя Метео Інфо</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header-page">
+      <div class="header-page-container">
+        <img class="zmi-logo" src="./assets/img/iconweather.png" alt="" />
 
-        <div class="header-page-container">
-            <img class="zmi-logo" src="./assets/img/iconweather.png" alt="">
-            
-            <a class="pic-cloud" href="#"><i class="fa-solid fa-cloud"></i></a>
-            <h1 class="head-line">Запоріжжя Метео Інфо</h1>
-            <a class="pic-sun" href="#"><i class="fa-solid fa-sun"></i></a>
-        </div>
+        <a class="pic-cloud" href="#"><i class="fa-solid fa-cloud"></i></a>
+        <h1 class="head-line">Запоріжжя Метео Інфо</h1>
+        <a class="pic-sun" href="#"><i class="fa-solid fa-sun"></i></a>
+      </div>
     </header>
 
     <main class="main-page">
+      <div class="sliderWrapper">
+        <img class="sliderImg" />
+        <button class="prevBnt"><i class="fa-solid fa-caret-left"></i></button>
+        <button class="nextbtn"><i class="fa-solid fa-caret-right"></i></button>
+      </div>
 
-        <div class="sliderWrapper">
-            <img class="sliderImg">
-            <button class="prevBnt"><i class="fa-solid fa-caret-left"></i></button>
-            <button class="nextbtn"><i class="fa-solid fa-caret-right"></i></button>
+      <div class="after-head-container">
+        <h2 class="real-time"></h2>
+        <button class="tempunitBtn"></button>
+        <button class="speedBtn"></button>
+      </div>
+
+      <div class="weather-card">
+        <img class="pic-about-weather" src="./assets/img/sun.jpg" alt="sun" />
+        <div class="temperatura-container">
+          <p class="temperatura"></p>
+          <p class="precipitation-now"></p>
+          <p class="speed"></p>
+          <p class="location"></p>
+        </div>
+      </div>
+      <!-- three-days==================================================================== -->
+      <div class="threedays-main-container">
+        <div class="threedays-weather-card">
+          <img
+            class="threedays-pic-about-weather"
+            src="./assets/img/sun.jpg"
+            alt=""
+          />
+          <div class="contant-container">
+            <p class="day"></p>
+            <p class="threedays-temperatura"></p>
+            <p class="threedays-precipitation"></p>
+            <p class="threedays-speed"></p>
+          </div>
         </div>
 
-        <div class="after-head-container">
-            <h2 class="real-time"></h2>
-            <button class="tempunitBtn"></button>
-            <button class="speedBtn"></button>
+        <div class="threedays-weather-card">
+          <img
+            class="threedays-pic-about-weather"
+            src="./assets/img/sun.jpg"
+            alt=""
+          />
+          <div class="contant-container">
+            <p class="day"></p>
+            <p class="threedays-temperatura"></p>
+            <p class="threedays-precipitation"></p>
+            <p class="threedays-speed"></p>
+          </div>
         </div>
 
-        <div class="weather-card">
-            <img class="pic-about-weather" src="./assets/img/sun.jpg" alt="sun">
-            <div class="temperatura-container">
-                <p class="temperatura"></p>
-                <p class="precipitation-now"></p>
-                <p class="speed"></p>
-                <p class="location"></p>
-            </div>
+        <div class="threedays-weather-card">
+          <img
+            class="threedays-pic-about-weather"
+            src="./assets/img/sun.jpg"
+            alt=""
+          />
+          <div class="contant-container">
+            <p class="day"></p>
+            <p class="threedays-temperatura"></p>
+            <p class="threedays-precipitation"></p>
+            <p class="threedays-speed"></p>
+          </div>
         </div>
-        <!-- three-days==================================================================== -->
-        <div class="threedays-main-container">
+      </div>
+      <!-- seven-days============================================================== -->
+      <div class="show-seven-days-weather-btn-container">
+        <button class="show-seven-days-weather-btn">
+          Показати погоду на 7 днів вперед
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
 
-            <div class="threedays-weather-card">
-                <img class="threedays-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                <div class="contant-container">
-                    <p class="day"></p>
-                    <p class="threedays-temperatura"></p>
-                    <p class="threedays-precipitation"></p>
-                    <p class="threedays-speed"></p>
-                </div>
+      <div class="seven-days-main-container">
+        <div class="seven-days-main">
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
             </div>
-    
-            <div class="threedays-weather-card">
-                <img class="threedays-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                <div class="contant-container">
-                    <p class="day"></p>
-                    <p class="threedays-temperatura"></p>
-                    <p class="threedays-precipitation"></p>
-                    <p class="threedays-speed"></p>
-                </div>
-            </div>
-    
-            <div class="threedays-weather-card">
-                <img class="threedays-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                <div class="contant-container">
-                    <p class="day"></p>
-                    <p class="threedays-temperatura"></p>
-                    <p class="threedays-precipitation"></p>
-                    <p class="threedays-speed"></p>
-                </div>
-            </div>
+          </div>
 
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
+
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
+
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
+
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
+
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
+
+          <div class="seven-days-weather-card">
+            <img
+              class="seven-days-pic-about-weather"
+              src="./assets/img/sun.jpg"
+              alt=""
+            />
+            <div class="contant-container">
+              <p class="seven-days-date"></p>
+              <p class="seven-days-temperatura"></p>
+              <p class="seven-days-precipitation"></p>
+              <p class="seven-days-speed"></p>
+            </div>
+          </div>
         </div>
-        <!-- seven-days============================================================== -->
-        <div class="show-seven-days-weather-btn-container">
-            <button class="show-seven-days-weather-btn">Показати погоду на 7 днів вперед <i class="fa-solid fa-arrow-down"></i></button>
-        </div>
+      </div>
 
-        <div class="seven-days-main-container">
-
-            <div class="seven-days-main">
-               
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-    
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-                
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-    
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-    
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-    
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-    
-                <div class="seven-days-weather-card">
-                    <img class="seven-days-pic-about-weather" src="./assets/img/sun.jpg" alt="">
-                    <div class="contant-container">
-                        <p class="seven-days-date"></p>
-                        <p class="seven-days-temperatura"></p>
-                        <p class="seven-days-precipitation"></p>
-                        <p class="seven-days-speed"></p>
-                    </div>    
-                </div>
-            </div>
-        </div>
-
-        <div class="container-info-about-weather">
-
-            <div class="card-info">
-                <h2 class="header-text">Літо буде жарким: прогнози синоптиків на цей сезон <i class="fa-solid fa-temperature-arrow-up"></i></h2>
-                <p class="text">
-                    Літній сезон цього року обіцяє бути незвично жарким. 
-                    Синоптики прогнозують підвищення середньої температури 
-                    до рекордних значень, що може призвести до численних 
-                    погодних аномалій.
-                </p>
-            </div>
-
-            <div class="card-info">
-                <h3 class="header-text">Прогнози температур <i class="fa-solid fa-sun-plant-wilt"></i></h3>
-                <p class="text">
-                    Згідно з даними метеорологічних 
-                    станцій, середня температура в літні 
-                    місяці може піднятися на 2-3 градуси вище 
-                    за норму. Найбільше спеки очікується в липні 
-                    та серпні, коли денні температури можуть досягати 
-                    +35°C і вище. Такі умови можуть вплинути на різні 
-                    аспекти нашого життя, включаючи здоров’я, сільське 
-                    господарство та водопостачання.
-                </p>
-            </div>
-
+      <div class="container-info-about-weather">
+        <div class="card-info">
+          <h2 class="header-text">
+            Літо буде жарким: прогнози синоптиків на цей сезон
+            <i class="fa-solid fa-temperature-arrow-up"></i>
+          </h2>
+          <p class="text">
+            Літній сезон цього року обіцяє бути незвично жарким. Синоптики
+            прогнозують підвищення середньої температури до рекордних значень,
+            що може призвести до численних погодних аномалій.
+          </p>
         </div>
 
+        <div class="card-info">
+          <h3 class="header-text">
+            Прогнози температур <i class="fa-solid fa-sun-plant-wilt"></i>
+          </h3>
+          <p class="text">
+            Згідно з даними метеорологічних станцій, середня температура в літні
+            місяці може піднятися на 2-3 градуси вище за норму. Найбільше спеки
+            очікується в липні та серпні, коли денні температури можуть досягати
+            +35°C і вище. Такі умови можуть вплинути на різні аспекти нашого
+            життя, включаючи здоров’я, сільське господарство та водопостачання.
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer class="footer-page">
-
-        <div class="footer-page-container">
-            <a class="response-message" href="mailto:artemgloba2@gmail.com"><i class="fa-regular fa-message"></i> Залишити відгук</a>
-            <a class="link-git-hub" href="https://github.com/ArtyomHloba/Practise2.git"><i class="fa-brands fa-github"></i> Посилання на GitHub</a>
-        </div>
-
+      <div class="footer-page-container">
+        <a class="response-message" href="mailto:artemgloba2@gmail.com"
+          ><i class="fa-regular fa-message"></i> Залишити відгук</a
+        >
+        <a
+          class="link-git-hub"
+          href="https://github.com/ArtyomHloba/Practise2.git"
+          ><i class="fa-brands fa-github"></i> Посилання на GitHub</a
+        >
+      </div>
     </footer>
-</body>
+  </body>
 </html>
