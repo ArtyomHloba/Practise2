@@ -3,19 +3,15 @@
 }
 
 body {
-  background-color: #f5f5f5;
   font-family: 'Inter', sans-serif;
-
+  background-color: #94b8ff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 0 2vw 0 2vw;
 }
 
 /* Header section========================================================*/
 .header-page {
-  max-width: 1000px;
-
   width: 100%;
   min-height: 50px;
   margin: 0 auto;
@@ -25,7 +21,7 @@ body {
 }
 
 .header-page-container {
-  padding: 25px 25px;
+  padding: 10px 25px;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -78,6 +74,7 @@ body {
   padding: 5px 5px;
   transition: 0.2s linear background-color;
   box-shadow: 0 0 10px gray;
+  border-radius: 10px;
 }
 
 .speedBtn:hover,
@@ -96,13 +93,14 @@ body {
   font-weight: 500;
   box-shadow: 0 0 10px gray;
   margin-right: auto;
+  border-radius: 10px;
 }
 
 /* Main section========================================================*/
 
 .main-page {
   max-width: 1000px;
-
+  padding: 0 2vw 0 2vw;
   width: 100%;
   margin: 0 auto;
   margin-top: 20px;
@@ -134,6 +132,7 @@ body {
   height: 100%;
   object-fit: cover;
   box-shadow: 0 0 5px gray;
+  border-radius: 10px;
 }
 
 .prevBnt,
@@ -173,6 +172,7 @@ body {
   margin-top: 15px;
   box-shadow: 0 0 10px gray;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .temperatura-container,
@@ -213,7 +213,7 @@ body {
   align-items: center;
   padding: 20px;
   gap: 7px;
-
+  border-radius: 10px;
   max-width: 320px;
   min-width: 150px;
   width: 100%;
@@ -265,7 +265,7 @@ body {
   align-items: center;
   padding: 10px 10px 20px 10px;
   gap: 5px;
-
+  border-radius: 10px;
   max-width: 250px;
   min-width: 150px;
   width: 100%;
@@ -294,6 +294,7 @@ body {
   padding: 5px 5px;
   transition: 0.2s linear background-color;
   box-shadow: 0 0 10px gray;
+  border-radius: 10px;
 }
 
 .show-seven-days-weather-btn:hover {
@@ -320,6 +321,7 @@ body {
   width: 100%;
   padding: 10px;
   box-shadow: 0 0 10px gray;
+  border-radius: 10px;
 }
 
 .header-text {
@@ -331,8 +333,6 @@ body {
 /* Footer ============================================================================*/
 
 .footer-page {
-  max-width: 1000px;
-
   width: 100%;
 
   margin: 0 auto;
@@ -429,5 +429,13 @@ body {
 
   .location {
     font-size: 12px;
+  }
+  .pic-cloud,
+  .pic-sun {
+    display: none;
+  }
+  .zmi-logo {
+    height: 30px;
+    width: 30px;
   }
 }
